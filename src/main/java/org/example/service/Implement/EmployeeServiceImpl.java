@@ -5,6 +5,7 @@ import org.example.repository.EmployeeRepository;
 import org.example.service.EmployeeService;
 
 import java.util.List;
+import java.util.Optional;
 
 public class EmployeeServiceImpl implements EmployeeService {
 
@@ -16,27 +17,32 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee save(Employee employee) {
-        return null;
+        return employeeRepository.save(employee);
     }
 
     @Override
     public Employee update(Employee employee) {
+        Optional<Employee> optionalEmployee = employeeRepository.findById(employee.getId());
+        if (optionalEmployee.isPresent()){
+            return employeeRepository.save(employee);
+        }
         return null;
     }
 
     @Override
-    public Employee delete(Employee employee) {
-        return null;
+    public void delete(Employee employee) {
+        employeeRepository.delete(employee);
     }
 
     @Override
     public List<Employee> findAll() {
-        System.out.println("Hello");
+        System.out.println("hello");
         return null;
+//        return employeeRepository.findAll();
     }
 
     @Override
-    public Employee findByID(Employee employee) {
-        return null;
+    public Optional<Employee> findByID(Employee employee) {
+        return employeeRepository.findById(employee.getId());
     }
 }

@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.domain.Employee;
+import org.example.repository.DepartmentRepository;
 import org.example.service.EmployeeService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -11,6 +12,7 @@ public class Main {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-config.xml");
         EmployeeService employeeService = applicationContext.getBean("employeeService", EmployeeService.class);
+//        DepartmentRepository departmentRepository = applicationContext.getBean("departmentRepository", DepartmentRepository.class);
         employeeService.findAll();
     }
 }
