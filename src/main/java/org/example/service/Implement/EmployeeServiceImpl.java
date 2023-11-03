@@ -1,11 +1,18 @@
 package org.example.service.Implement;
 
 import org.example.domain.Employee;
+import org.example.repository.EmployeeRepository;
 import org.example.service.EmployeeService;
 
 import java.util.List;
 
 public class EmployeeServiceImpl implements EmployeeService {
+
+    private EmployeeRepository employeeRepository;
+
+    public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
+        this.employeeRepository = employeeRepository;
+    }
 
     @Override
     public Employee save(Employee employee) {
@@ -24,6 +31,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public List<Employee> findAll() {
+        System.out.println("Hello");
         return null;
     }
 
