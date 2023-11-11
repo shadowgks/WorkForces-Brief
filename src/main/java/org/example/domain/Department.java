@@ -1,6 +1,6 @@
 package org.example.domain;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 import java.util.List;
 import java.util.Objects;
@@ -14,6 +14,9 @@ public class Department {
 
     public Department() {
 
+    }
+    public Department(String name) {
+        this.name = name;
     }
 
     public Long getId() {

@@ -1,6 +1,6 @@
 package org.example.domain;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 import java.util.Objects;
 
@@ -12,6 +12,7 @@ public class Employee {
     private String name;
     private Double salary;
     @ManyToOne
+    @JoinColumn(name = "id_department")
     private Department department;
 
     public Employee() {

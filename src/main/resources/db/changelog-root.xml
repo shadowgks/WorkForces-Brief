@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+<!--    <includeAll path="/db/changelog"/>-->
+    <include file="/db/changelog/11_11_2023_11_24_create_table_department.xml"/>
+    <include file="/db/changelog/11_11_2023_12_24_create_table_employee.xml"/>
+    <include file="/db/changelog/11_11_2023_03_51_alter_table_employee.xml"/>
+    <include file="/db/changelog/11_11_2023_04_26_alter_column_employee.xml"/>
+</databaseChangeLog>

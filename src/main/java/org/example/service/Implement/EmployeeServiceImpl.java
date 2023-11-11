@@ -9,7 +9,7 @@ import java.util.Optional;
 
 public class EmployeeServiceImpl implements EmployeeService {
 
-    private EmployeeRepository employeeRepository;
+    private final EmployeeRepository employeeRepository;
 
     public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
         this.employeeRepository = employeeRepository;
@@ -36,9 +36,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public List<Employee> findAll() {
-        System.out.println("hello");
-        return null;
-//        return employeeRepository.findAll();
+        return employeeRepository.findAll();
     }
 
     @Override
