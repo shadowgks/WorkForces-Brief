@@ -27,11 +27,13 @@ public class Main {
 //        Employee employee1 = new Employee("issam", 500.0, department);
 //        Employee employee2 = new Employee("bilal", 600.0, department);
 //        Employee employee3 = new Employee("salah", 700.0, department);
+//        Employee employee4 = new Employee("salah2", "salah@gmail.com", department);
 //
 //        employeeService.save(employee);
 //        employeeService.save(employee1);
 //        employeeService.save(employee2);
 //        employeeService.save(employee3);
+//        employeeService.save(employee4);
 
 //        //Get All employee
 //        System.out.println(employeeService.findAll());

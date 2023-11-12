@@ -12,6 +12,13 @@
                 name varchar(255)
             );
         </sql>
+
+        <rollback>
+            <dropTable tableName="department"/>
+<!--            <sql>-->
+<!--                Drop Table department;-->
+<!--            </sql>-->
+        </rollback>
     </changeSet>
 
 

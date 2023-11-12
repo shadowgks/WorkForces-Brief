@@ -10,17 +10,19 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private Double salary;
+//    private Double salary;
     @ManyToOne
     @JoinColumn(name = "id_department")
     private Department department;
 
+    private String email;
+
     public Employee() {
 
     }
-    public Employee(String name, Double salary, Department department) {
+    public Employee(String name, String email, Department department) {
         this.name = name;
-        this.salary = salary;
+        this.email = email;
         this.department = department;
     }
 
@@ -37,12 +39,12 @@ public class Employee {
         this.name = name;
     }
 
-    public Double getSalary() {
-        return salary;
+    public String getSalary() {
+        return email;
     }
 
     public void setSalary(Double salary) {
-        this.salary = salary;
+        this.email = email;
     }
 
     public Department getDepartment() {
@@ -58,14 +60,14 @@ public class Employee {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Employee employee = (Employee) o;
-        return Objects.equals(name, employee.name) && Objects.equals(salary, employee.salary) && Objects.equals(department, employee.department);
+        return Objects.equals(name, employee.name) && Objects.equals(email, employee.email) && Objects.equals(department, employee.department);
     }
 
     @Override
     public String toString() {
         return "Employee{" +
                 "name='" + name + '\'' +
-                ", salary=" + salary +
+                ", email=" + email +
                 ", department=" + department +
                 '}';
     }

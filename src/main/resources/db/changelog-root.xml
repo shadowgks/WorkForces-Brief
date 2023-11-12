@@ -9,4 +9,8 @@
     <include file="/db/changelog/11_11_2023_12_24_create_table_employee.xml"/>
     <include file="/db/changelog/11_11_2023_03_51_alter_table_employee.xml"/>
     <include file="/db/changelog/11_11_2023_04_26_alter_column_employee.xml"/>
+    <include file="/db/changelog/11_12_2023_12_56_create_table_test.sql"/>
+    <include file="/db/changelog/11_12_2023_03_28pm_create_table_test2.sql"/>
+    <include file="/db/changelog/11_12_2023_04_12pm_create_table_test3.sql"/>
+    <include file="/db/changelog/test/test_query_oracle.xml"/>
 </databaseChangeLog>

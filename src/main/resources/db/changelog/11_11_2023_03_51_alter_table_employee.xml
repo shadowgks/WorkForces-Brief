@@ -10,5 +10,6 @@
             DROP COLUMN salary,
             ADD email varchar(255);
         </sql>
+
     </changeSet>
 </databaseChangeLog>
